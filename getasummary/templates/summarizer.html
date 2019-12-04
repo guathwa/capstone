@@ -1,0 +1,62 @@
+</head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+<body>
+
+<header>
+  <h1><img src="/static/images/logo.png" alt="logo" width="5%" height="auto"/>          <img src="/static/images/logo.png" alt="logo" width="3%" height="auto"/>  Get A Summary           <img src="/static/images/logo.png" alt="logo" width="3%" height="auto"/>     <img src="/static/images/logo.png" alt="logo" width="5%" height="auto"/>
+    <div class="header"></div>
+  </h1>
+</header>
+
+<form action="/getasummary2" method="POST" enctype="multipart/form-data">
+  <div class="row">
+    <div class="column" >Specify Text Source:<br>
+      <div class='blue-column'>
+        <br>
+        <input type="radio" name="input" id="fromfile" value="fromfile" checked> Upload Text File </input>
+        <input type="file" name="file"></input><br><br>
+        <input type="radio" name="input" id="fromurl" value="fromurl"> Enter a Url</input>
+        <input type="text" name="url" style="width:400"></input><br><br>
+        <input type="radio" name="input" id="fromblock" value="fromblock"> Paste your Text </input><br>
+        <textarea rows="15" cols="75" name="block" id="block" style="font-family: Arial;font-size:15px"></textarea><br><br>
+      </div>
+    </div>
+    <div class="column">Specify Summary Size:<br>
+      <div class='green-column'>
+        <br>
+        <input type="radio" name="ssize" id="s1min" value="s1min" checked> 1 min summary </input>
+        <input type="radio" name="ssize" id="s3mins" value="s3mins"> 3 mins summary </input>
+        <input type="radio" name="ssize" id="s5mins" value="s5mins"> 5 mins summary </input><br><br>
+        <input type="radio" name="ssize" id="snumsent" value="snumsent" > Number of sentences (default:5): </input>
+        <input type="text" name="numsent" id="numsent" </input><br><br><br>
+        Select Summarization Methods:<br><br>
+        <input type="checkbox" name="model1" id="model1" value="model1" checked> Centroid-Based BOW Summarization (Default) </input><br><br>
+        <input type="checkbox" name="model2" id="model1" value="model2"> Graph-Based Summarization</input><br><br>
+        <button type="text" style="height:50px; width:50px;font-family: Arial;font-size:20px">Go</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="footer">
+    <p>Output</p>
+    {% if output1 %}
+      <b>Summary 1:</b>
+      <textarea rows="15" cols="156" style="font-family: Arial;font-size:15px">{{output1}}
+      </textarea>
+    {% endif %}
+
+    {% if output2 %}
+      <b><br>Summary 2:</b>
+      <textarea rows="15" cols="156" style="font-family: Arial;font-size:15px">{{output2}}
+      </textarea>
+    {% endif %}
+
+
+    {% if errors %}
+    <b>Errors :</b> {{ errors}}
+    {% endif %}
+</div>
+
+</body>
+</html>
