@@ -1,5 +1,6 @@
 ## DSI-10 Capstone Project (Automatic Tex Summarization)
 A Generic Text Summarizer
+docker image : https://hub.docker.com/repository/docker/guathwa/textsummarizer
 
 ## Problem Statement
 Having problem with too much content to read but too little time ? Get a summary that contains the key sentences using an extractive text summarizer.
