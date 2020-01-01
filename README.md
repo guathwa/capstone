@@ -2,7 +2,7 @@
 
 ## A Generic Text Summarizer
 
-## docker image : https://hub.docker.com/repository/docker/guathwa/textsummarizer
+## docker image : https://hub.docker.com/repository/docker/guathwa/docker-flask-summary
 
 ## telegram bot :  https://web.telegram.org/#/im?p=@TextSummarizerBot
 
