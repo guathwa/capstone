@@ -1,5 +1,6 @@
 ## DSI-10 Capstone Project (Automatic Tex Summarization)
-A Generic Text Summarizer
+
+## A Generic Text Summarizer
 
 ## docker image : https://hub.docker.com/repository/docker/guathwa/textsummarizer
 
