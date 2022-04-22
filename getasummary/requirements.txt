@@ -29,7 +29,7 @@ numpy==1.17.4
 pandas==0.25.3
 plac==0.9.6
 preshed==2.0.1
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 python-dateutil==2.8.0
 pytz==2019.3
 regex==2019.11.1
