@@ -25,7 +25,7 @@ murmurhash==1.0.2
 networkx==2.4
 neuralcoref==4.0
 nltk==3.4.5
-numpy==1.17.4
+numpy==1.22.0
 pandas==0.25.3
 plac==0.9.6
 preshed==2.0.1
